@@ -1,0 +1,430 @@
+/* Start Variables */
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+  }
+  /* End Variables */
+  /* Start Global Rules */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  body {
+    font-family: "Work Sans", sans-serif;
+    
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .special-heading {
+    font-size: 100px;
+    letter-spacing: -3px;
+    color: #d9dee0;
+    text-align: center;
+  }
+  .special-heading + p {
+    margin: -50px;
+    font-size: 19px;
+    text-align: center;
+    color: #d1cbcb;
+    margin-bottom: 70px;
+  }
+  
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+ 
+  @media (max-width: 767px) {
+    .special-heading {
+      font-size: 60px;
+    }
+    .special-heading + p {
+      margin-top: -20px;
+    }
+  }
+  /* End Components */
+
+  /* Start Header */
+  .header {
+    padding: 20px;
+  }
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .logo {
+    width: 60px;
+  }
+  .header .links {
+    position: relative;
+  }
+  .header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+  }
+  .header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .header .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+  }
+  .header .links .icon span:first-child {
+    width: 100%;
+  }
+  .header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: var(--main-duration);
+  }
+  .header .links .icon span:last-child {
+    width: 100%;
+  }
+  .header .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+  }
+  .header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+  }
+  .header .links:hover ul {
+    display: block;
+  }
+  .header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: var(--main-duration);
+  }
+  .header .links ul li a:hover {
+    padding-left: 25px;
+  }
+  .header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+  }
+  /* End Header */
+    /* start landing */
+    .landing {
+      background-image: url(../landing.webp);
+      width: 100%;
+      height: calc(100vh - 68px);
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+
+    }
+    .landing .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+     transform: translate(-50% , -50% );
+     width: 320px;
+     text-align: center;
+    }
+    .landing .container .intro-text h2 {
+      font-size: 45px;
+      color: var(--main-color);
+font-weight: bold;
+margin-bottom: 1px;
+margin: 0;
+    }
+    .landing .container .intro-text p {
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 1.8;
+      color: #3a3838;
+      
+}
+
+  /* End landing */
+    /* start fauters */
+    .fauters {
+padding-top: 60px;
+padding-bottom: 60px;
+background-color: var(--section-background);
+    }
+    .fauters .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .fauters .container .fait {
+     text-align: center;
+    }
+    .fauters .container .fait i {
+      font-size: 40px;
+      color: var(--main-color);
+      margin-bottom: 20px;
+     }
+     .fauters .container .fait h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: rgb(97, 110, 99);
+      font-weight: 700;
+     }
+     .fauters .container .fait p {
+      font-size: 20px;
+      color: #646363;
+      line-height: 1.5;
+      
+     }
+        /* end fauters */
+
+        /* srart services */
+        .services {
+padding-top: 60px;
+padding-bottom: 60px;
+        }
+        .services .container  {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 20px;
+         }
+         .services .container .src  {
+          display: flex;
+         }
+         .services .container .src i  {
+          flex-basis: 60px;
+          color: var(--main-color);
+          font-size: 39px;
+         }
+         .services .container .text {
+          flex: 1;
+         }
+         .services .container .text h2 {
+          font-weight: bold;
+          margin-bottom: 20px;
+         }
+         .services .container .text p {
+          font-size: 19px;
+          line-height: 1.6;
+         }
+         .services .container .image {
+          position: relative;
+          text-align: center;
+          margin-left: 60px;
+         }
+         .services .container .image::before {
+          content: "";
+          position: absolute;
+          width: 80px;
+          height: calc(100% + 80px);
+             top: -40px;
+             right: 13px;
+             z-index: -1;
+          background-color: var(--secondary-color);
+         }
+         .services .container .image img {
+          width: 235px;
+         }
+
+        /*  end services*/
+         /*  start portfolio*/
+         .portfolio {
+          padding-top: 60px;
+padding-bottom: 60px;
+background-color: rgb(252, 248, 248);
+         }
+         .portfolio .container {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 20px;
+          
+         }
+         .portfolio .container .card {
+      text-align: center;
+      border: 1px solid rgb(169, 175, 175);
+      border-radius: 5px;
+         }
+         
+         .portfolio .container  .info {
+          padding-top: 25px;
+          padding: 20px;
+             }
+             .portfolio .container .card h2{
+              color: var(--main-color);
+              font-weight: bold;
+              letter-spacing: 1.5px;
+                 }
+                 .portfolio .container .card p{
+                  font-size: 19px;
+                  line-height: 1.6;
+                  margin-bottom: 10px;
+                  color: rgb(117, 116, 116);
+                }
+        /*  end portfolio*/
+         /*  start aboute*/
+         .about  {
+          padding-top: 60px;
+          padding-bottom: 60px;
+         }
+         .about .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+         }
+         .about .container .image img  {
+          width: 250px;
+         }
+         .about .container .image  {
+          position: relative;
+          width: 250px;
+          height: 375px;
+          margin-bottom: 60px;
+         }
+         .about .container .image::before  {
+          content:"";
+          position: absolute;
+          width: 80px;
+          height: calc(100% + 80px);
+        top: -40px;
+        z-index: -1;
+        left: -20px;
+          background-color: #e4dfdf;
+         }
+         .about .container .text {
+          flex: 1;
+overflow: hidden;
+margin-left: 70px;
+         }
+         .about .container .text p:first-of-type {
+          font-size: 20px;
+          padding-left: 60px;
+          color: #3b3b3b;
+          line-height: 1.6;
+          margin-bottom: 40px;
+         }
+         .about .container .text hr {
+          display: inline-block;
+          width: 50%;
+          margin-left: 70px;
+          border: 1px solid var(--main-color);
+          margin-bottom: 20px;
+         }
+         .about .container .text p:last-of-type {
+          font-size: 20px;
+          padding-left: 60px;
+          color: #969090;
+          line-height: 1.6;
+          margin-bottom: 40px;
+         }
+         
+          
+          
+
+         
+
+  
+        /*  end about*/
+                /*  start contact*/
+     .contact {
+padding-top: 60px;
+padding-bottom: 60px;
+background-color: #fdf7f7;
+     }
+     .contact .first-contact  {
+  text-align: center;
+           }
+           .contact .first-contact h2 {
+            font-size: 30px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+                  } 
+                  .contact .first-contact .email  {
+                    display: inline-block;
+                    font-size: 25px;
+                    color: var(--main-color);
+                    margin-bottom: 18px;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    font-weight: 700;
+                          } 
+                          .contact .first-contact .icone  {
+                            font-size: 18px;
+                            color: var(--secondary-color);
+                            margin-bottom: 50px;
+                                  }       
+                                  .contact .first-contact .icone i  {
+                                  margin-left: 10px;
+                                          }         
+           
+                           
+        /*  end contact*/
+
+                /*  start footer*/
+                .fouter  {
+                  padding-top: 30px;
+                  padding-bottom: 30px;
+                  background-color: var(--secondary-color);
+                  
+                          }    
+                          .fouter .first-fouter  {
+                            text-align: center;
+                            font-size: 20px;
+                                    }   
+                                    .fouter .first-fouter span  {
+                                      color: var(--main-color);
+                                              }  
+                                              .fouter .first-fouter h2  {
+                                                color: rgb(233, 230, 230);
+                                                        }                                     
+
+        /*  end footer*/
+
+
+
+
+
+
+
+
+
+
+    
